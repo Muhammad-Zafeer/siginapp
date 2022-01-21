@@ -1,0 +1,13 @@
+$(function() {
+  $("#input").on("click", function(event) {
+    event.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "users#create",
+      data: "your_form_data"
+      success: function(result) {
+        // Append the result to a table or list, $("list").append(result)
+      },
+    });
+  });
+});

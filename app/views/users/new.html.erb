@@ -1,0 +1,46 @@
+
+
+
+<div class="container">
+
+</div>
+
+
+
+<div class="container mt-5">
+<form_with action="<% register_path %>"" class="sign-in-form" method="POST"remote="true" local="false">
+  <%= token_tag %>
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text"name="username" id="username" required placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="userpassword" id="userpassword" placeholder="Password" required />
+            </div>
+            <input type="submit" value="register" class="btn1" />
+            <% if @success%>
+            <p class="mt-1">amount is created</p>
+            <%end%>
+            <a href="<%= signin_path%>">
+            <input type="submit" value="lognin" class="btn1"  href="signin"/></a>
+
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+
+</div>
